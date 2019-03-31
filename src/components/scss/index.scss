@@ -1,0 +1,21 @@
+@import "../node_modules/vue-material/src/theme/engine";
+
+@include md-register-theme("default", (
+  // See: https://vuematerial.io/themes/configuration
+  primary: md-get-palette-color(deeppurple, A200), // The primary color of your application
+  accent: md-get-palette-color(pink, A200) // The accent or secondary color
+));
+
+@import "../node_modules/vue-material/src/theme/all"; // Apply the theme
+
+.md-toolbar {
+  a {
+    color: rgba(255, 255, 255, 1) !important;
+    &.router-link-exact-active {
+      color: rgba(0, 0, 0, 0.87) !important;
+    }
+  }
+}
+.md-content {
+  padding: 16px;
+}
